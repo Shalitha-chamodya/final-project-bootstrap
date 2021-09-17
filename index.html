@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <!-- Bootstrap CSS -->
-   
+
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -24,393 +24,580 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="CSS/styles.css" />
-    
 
-    <title>Ristorante Con Fusion</title>
+    <title>myShop</title>
   </head>
 
-  <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
     <div class="container">
-      
-      
+      <h1 class="navbar-text col-sm" id="myShop">
+        <strong>myShop</strong>
+      </h1>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" >
-        <span class="navbar-toggler-icon"></span>
-       </button> 
-
-      <a class="navbar-brand mr-auto" href="# "><img src="img/img/logo.png" height="30" width="41"></a>
-      <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
-      </ul>
-
-        <span class="navbar-text">
-          <a >
-            <span class="fa fa-sign-in" id="loginButton"> Login</span>
-          </a>
-        </span>
+      <div class="navbar input-group col-sm-7">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="search"
+          id="searchInput"
+        />
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="searchIcon"
+            ><span><i class="fa fa-search"></i></span
+          ></span>
+        </div>
       </div>
-      
+      <span class="navbar-text col-sm">
+        <a href="login.html" > Login/SignUp </a>
+      </span>
+
+      <span class="navbar-text col-sm-1">
+        <a>
+          <span class="" id=""> List Item</span>
+        </a>
+      </span>
+
+      <span class="navbar-text col-sm-1">
+        <a>
+          <span class="" id=""> Cart</span>
+        </a>
+      </span>
+    </div>
   </nav>
 
-  <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg" role="content">
-        <div class="modal-content">
-          <div class=modal-header>
-            <h4 class="modal-title">Reserve a Table</h4>
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
-          </div>
-          <div class="modal-body">
-          
-          <form>
-              <div class="form-group row">
-              <label for="radio" class="col-12 col-md-2 col-form-label"><strong>Number of Guests</strong></label>
-              <div class="col-12 col-md-10">
 
-              <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                     <label class="form-check-label" for="inlineRadio2">2</label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-              </div>
-              
-              <div class="form-check form-check-inline">
-                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                     <label class="form-check-label" for="inlineRadio4">4</label>
-              </div>
-
-              <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-                    <label class="form-check-label" for="inlineRadio5">5</label>
-              </div>
-              
-              <div class="form-check form-check-inline">
-                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
-                     <label class="form-check-label" for="inlineRadio6">6</label>
-              </div>
-
-              </div> 
-              </div>
-
-              <div class="form-group row">
-                <label for="date" class="col-12 col-md-2 col-form-label"><strong>Section</strong></label>
-                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                     <label class="btn btn-success active">
-                     <input type="radio" name="options" id="option1" autocomplete="off" checked> No-Smoking
-                     </label>
-                      <label class="btn btn-danger">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
-                    </label>
-                    </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="date" class="col-12 col-md-2 col-form-label"><strong>Date and Time</strong></label>
-                <div class="col-6 col-md-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="date"
-                  name="date"
-                  placeholder="Date"
-                />
-              </div>
-
-              <div class="col-6 col-md-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="time"
-                  name="time"
-                  placeholder="Time"
-                />
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="offset-md-2 col-md-10">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary">
-                  Reserve
-                </button>
-              </div>
-            </div>
-
-              </form>
-            
-          
-          
-        
-         </div>
-          </div>
-        </div>
-    </div>
-
-  </div>
 
   <body>
-    <header class="jumbotron">
-      <div class="container">
-        <div class="row row-header">
-          <div class="col-12 col-sm-6">
-            <h1>Ristorante con Fusion</h1>
-            <p>
-              We take inspiration from the World's best cuisines, and create a
-              unique fusion experience. Our lipsmacking creations will tickle
-              your culinary senses!
-            </p>
-          </div>
-          <div class="col-12 col-sm-3 align-self-center">
-            <img src="img/img/logo.png" class="img-fluid">
-          </div>
-
-          <div class="col-12 col-sm-3 align-self-center">
-              <button class="btn bg-warning btn-lg pr-5 pl-5" id="reserveButton"> Reserve table
+    <div class="container c-content">
+      <div class="row row-content d-none d-sm-block">
+        <div class="col-12 col-sm-12">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <button class="btn btn-danger btn-sm" id="carouselButton">
+                <span class="fa fa-pause"></span>
               </button>
-          </div>
+              <div class="carousel-item active">
+                <img
+                  class="d-block img-fluid"
+                  src="https://ae01.alicdn.com/kf/Hfd9a235919ab40149caaa70a04d97a0cC/750x300.jpg_Q90.jpg_.webp"
+                  alt="uthappizza"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="https://ae01.alicdn.com/kf/H5849dc7db8fd4576bc83cc080a337f519.jpg_Q90.jpg_.webp"
+                  alt="buffet"
+                />
+                <div class="carousel-caption d-none d-md-block"></div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="https://ae01.alicdn.com/kf/Hf70c75d1189b4fd69f12e907a8f7eb24x.jpg_Q90.jpg_.webp"
+                  alt="alberto"
+                />
+              </div>
+            </div>
+            <ol class="carousel-indicators">
+              <li
+                data-target="#mycarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#mycarousel" data-slide-to="1"></li>
+              <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ol>
+            <a
+              class="carousel-control-prev"
+              href="#mycarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#mycarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </a>
 
+            
+          </div>
         </div>
       </div>
-    </header>
-
-    <div class="container">
 
       <div class="row row-content">
-          <div class="col">
-              <div id="mycarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                  <button class="btn btn-danger btn-sm" id="carouselButton">
-                	  <span class="fa fa-pause"></span>
-               </button>
-                  <div class="carousel-item active">
-                    <img class="d-block img-fluid" src="img/img/uthappizza.png" alt="uthappizza">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h2>Uthappizza <span class="badge badge-danger">Hot</span>
-                        <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">
-                        A unique combination of Indian Uthappam (pancake) and Italian pizza,
-                        topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
-                        onion, Guntur chillies and Buffalo Paneer.
-                        </p>
-                    </div>
-
-                  </div>
-                  <div class="carousel-item">
-                        <img class="d-block img-fluid" src="img/img/buffet.png" alt="buffet">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h2>Alberto Somayya</h2>
-                      <h4 >Executive Chef</h4>
-                       <p class="d-none d-sm-block">
-                        Award winning three-star Michelin chef with wide International
-                        experience having worked closely with whos-who in the culinary
-                        world, he specializes in creating mouthwatering Indo-Italian fusion
-                        experiences.
-                       </p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                      <img class="d-block img-fluid" src="img/img/alberto.png" alt="alberto">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h2>Alberto Somayya</h2>
-                      <h4 >Executive Chef</h4>
-                      <p class="d-none d-sm-block">
-                      Award winning three-star Michelin chef with wide International
-                      experience having worked closely with whos-who in the culinary
-                      world, he specializes in creating mouthwatering Indo-Italian fusion
-                      experiences.
-                      </p>
-                    </div>
+        <!-- Card -->
+        <div class="container d-flex justify-content-center mt-50 mb-50">
+          <div class="row">
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/201908/1565321509_26.gif"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
                   </div>
                 </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#mycarousel" data-slide-to="0" class="active "></li>
-                    <li data-target="#mycarousel" data-slide-to="1"></li>
-                    <li data-target="#mycarousel" data-slide-to="2"></li>
-                </ol>
-                <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon "></span>
-                </a>
-                <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon "></span>
-                </a> 
-         
-                <button class="btn btn-danger btn-sm" id="carouselButton">
-                	  <span class="fa fa-pause"></span>
-               </button>
-               
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Smart Watch Sports</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Watches</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$45.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">68 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
               </div>
-          </div>
-      </div>
-
-      <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-4 order-sm-last col-md-3">
-          <h3>Our Lipsmacking Culinary Creations</h3>
-        </div>
-        <div class="col col-sm order-sm-first col-md">
-          <div class="media">
-            <img class="d-flex mr-3 img-thumbnail align-self-center"
-            src="img/img/uthappizza.png" alt="">
-            <div class="media-body">
-              <h2 class="mt-0">Uthappizza <span class="badge badge-danger">Hot</span>
-               <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-          <p class="d-none d-sm-block">
-            A unique combination of Indian Uthappam (pancake) and Italian pizza,
-            topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
-            onion, Guntur chillies and Buffalo Paneer.
-          </p>
             </div>
-              
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-4 col-md-3">
-          <h3>This Month's Promotions</h3>
-        </div>
-        <div class="col col-sm col-md">
-          <div class="media">
-           <div class="media-body">
-          <h2>Weekend Grand Buffet <span class="badge badge-danger">New </span></h2>
-          
-          <p class="d-none d-sm-block">
-            Featuring mouthwatering combinations with a choice of five different
-            salads, six enticing appetizers, six main entrees and five choicest
-            desserts. Free flowing bubbly and soft drinks. All for just $19.99
-            per person
-          </p>
-          </div> 
-           <img class="d-flex mr-3 img-thumbnail align-self-center"
-            src="img/img/buffet.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-4 order-sm-last col-md-3">
-          <h3>Meet our Culinary Specialists</h3>
-        </div>
-        <div class="col col-sm order-sm-first col-md ">
-          <div class="media">
-            <img class="d-flex mr-3 img-thumbnail align-self-center"
-            src="img/img/alberto.png" alt="">
-
-            <div class="media-body">
-            <h2 class="mt-0">Alberto Somayya</h2>
-          <h4 >Executive Chef</h4>
-          <p class="d-none d-sm-block">
-            Award winning three-star Michelin chef with wide International
-            experience having worked closely with whos-who in the culinary
-            world, he specializes in creating mouthwatering Indo-Italian fusion
-            experiences.
-          </p>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/202106/1623912310_34.jpg"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Smart Wi-Fi IR Controller</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Tablets</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">25 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/202102/1612851725_26.jpg"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Monocular Telescope Camera</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Camera</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$190.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">42 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/201712/1513255194_17.jpg"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >3 in 1 Sports Selfie Stick</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Camera</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">39 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/201912/1577360011_26.gif"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Sports Smart Watch</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Watches</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$50.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">20 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/202107/1627634259_34.jpg"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Qi Wireless Car Charger Mount</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true"
+                      >Smartphone</a
+                    >
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$120.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">34 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/201908/1565321509_26.gif"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Smart Watch Sports</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Watches</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$45.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">68 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img
+                      src="https://www.blitzwolf.com/bg_os/other/upload_temp/products/original/202106/1623912310_34.jpg"
+                      class="card-img img-fluid"
+                      width="96"
+                      height="350"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="card-body bg-light text-center">
+                  <div class="mb-2">
+                    <h6 class="font-weight-semibold mb-2">
+                      <a href="#" class="text-default mb-2" data-abc="true"
+                        >Smart Wi-Fi IR Controller</a
+                      >
+                    </h6>
+                    <a href="#" class="text-muted" data-abc="true">Tablets</a>
+                  </div>
+                  <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+                  <div>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                    <i class="fa fa-star star"></i>
+                  </div>
+                  <div class="text-muted mb-3">25 reviews</div>
+                  <button type="button" class="btn bg-cart">
+                    <i class="fa fa-cart-plus mr-2"></i> Add to cart
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          
         </div>
+        <!-- Card -->
       </div>
 
-    
+    <!-- Footer -->
+<footer class="page-footer font-small elegant-color">
+
+  <div class="color-primary">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic fIcon">
+            <i class="fa fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic fIcon">
+            <i class="fa fa-twitter  mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic fIcon">
+            <i class="fa fa-google-plus-square  mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic fIcon">
+            <i class="fa fa-linkedin  mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic fIcon">
+            <i class="fa fa-instagram "> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
     </div>
+  </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-4 offset-1 col-sm-2">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-7 col-sm-5">
-            <h5>Our Address</h5>
-            <address>
-              121, Clear Water Bay Road<br />
-              Clear Water Bay, Kowloon<br />
-              HONG KONG<br />
-              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
-              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
-              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-            </address>
-          </div>
-          <div class="col-12 col-sm-4 align-self-center">
-            <div class="text-center">
-               <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-              <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-              <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-              <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-              <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-              <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <p>© Copyright 2018 Ristorante Con Fusion</p>
-          </div>
-        </div>
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left pt-4 pt-md-5 f-middle">
+
+    <!-- Grid row -->
+    <div class="row mt-1 mt-md-0 mb-4 mb-md-0">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+        <!-- Links -->
+        <h5>About me</h5>
+        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+        <p class="foot-desc mb-0">Here you can use rows and columns to organize your footer content. Lorem
+          ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
       </div>
-    </footer>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+        <!-- Links -->
+        <h5>Shopping with us</h5>
+        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+        <ul class="list-unstyled foot-desc ">
+          <li class="mb-2 ">
+            <a class="f-desc" href="#!">Making payments</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Delivery options</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Buyer protection</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Customer service</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+        <!-- Links -->
+        <h5>Useful links</h5>
+        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+        <ul class="list-unstyled foot-desc">
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Your Account</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Become an Affiliate</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Shipping Rates</a>
+          </li>
+          <li class="mb-2">
+            <a class="f-desc" href="#!">Help</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+        <!-- Links -->
+        <h5>Contacts</h5>
+        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+        <ul class="fa-ul foot-desc ml-4">
+          <li class="mb-2"><span class="fa-li"><i class="far fa-map"></i></span>New York, Avenue Street 10
+          </li>
+          <li class="mb-2"><span class="fa-li"><i class="fas fa-phone-alt"></i></span>042 876 836 908</li>
+          <li class="mb-2"><span class="fa-li"><i class="far fa-envelope"></i></span>company@example.com</li>
+          <li><span class="fa-li"><i class="far fa-clock"></i></span>Monday - Friday: 10-17</li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 f-bottom f-desc">© 2020 Copyright:
+    <a class="f-desc" href="#"> myShop.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    
+
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
- 
-
+    <script> 
+    $(function(){
+      $("#loginModal").load("login.html"); 
+    });
+    </script> 
+    
   </body>
 </html>
